@@ -1,0 +1,10 @@
+---
+- name: uninstall httpd
+  hosts: centos-1 centos-2
+  sudo: true
+  tasks:
+    - name: stop the service
+      service:
+        name: httpd
+        state: stopped
+        enabled: true
